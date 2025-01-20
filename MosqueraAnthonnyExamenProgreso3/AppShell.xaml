@@ -16,7 +16,7 @@
     <TabBar>
         <ShellContent Title="Buscar"
                       ContentTemplate="{DataTemplate local:Buscar}" />
-        <ShellContent Title="Leer BD" Icon="icon_about.png"
+        <ShellContent Title="Leer BD" 
                 ContentTemplate="{DataTemplate local:LeerBD}" />
     </TabBar>
 
