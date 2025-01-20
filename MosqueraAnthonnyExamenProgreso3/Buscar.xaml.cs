@@ -9,29 +9,12 @@ public partial class Buscar : ContentPage
 		InitializeComponent();
 	}
 
-	public class Pais
-	{
-		public Nombre name { get; set }
-		public string Region { get; set }
-		public Mapas maps { get; set }
-	}
-	
-
-	public class Nombre
-	{
-		public string Common { get; set; }
-    }
-
-    public class Mapas
-    {
-        public string GoogleMaps { get; set; }
-    }
 
 
 
     private async void BuscarButton_Clicked(object sender, EventArgs e)
 	{
-		String nombrePais = NombrePaisEntry.Text;
+        String nombrePais = NombrePaisEntry.Text;
 
 		if (string.IsNullOrWhiteSpace(nombrePais))
 		{
@@ -56,9 +39,27 @@ public partial class Buscar : ContentPage
             }
 		}
 		catch (Exception ex) {
-			
-		ResultadoLabel.Text = "ocurrió un error al buscar el pais, verifique el nombre o la conexión"
+
+			ResultadoLabel.Text = "ocurrió un error al buscar el pais, verifique el nombre o la conexión";
 		}
 
 	}
+
+    public class Pais
+    {
+        public Nombre name { get; set; }
+        public string Region { get; set; }
+        public Mapas maps { get; set; }
+    }
+
+
+    public class Nombre
+    {
+        public string Common { get; set; }
+    }
+
+    public class Mapas
+    {
+        public string GoogleMaps { get; set; }
+    }
 }
